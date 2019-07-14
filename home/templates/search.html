@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+{% include 'nav.html'%}
+
+
+
+<title>Search</title>
+
+
+<form method="GET" action="" class="form-inline">{% csrf_token %}
+{{ form.as_p}}
+	 <input type="text" name="q" value = "{{ request.GET.q }}" placeholder="search area/name/etc...." class="form-control"> 
+	<input type="submit"  value="search" class="btn btn-success">
+</form>
+
+
+
+<table cellspacing="10px" cellpadding="10px" border="solid" width="100%" style="margin-top:20px, border:2px" class="table" >
+<tr><th>name</th><th>Experience</th><th>Area</th><th>Contact</th><th>profile</th></tr>
+{% for i in items %}
+
+	<center>
+	<div ><center> 
+		<tr ><td>{{ i.name}}</td><td>{{ i.experience }}</td><td>{{ i.area }}</td><td>{{i.contact}}</td><td><center><button class="btn btn-primary"><a href="http://127.0.0.1:8000/{{i.id}}/detail/"> <span style="color: white">View profile</span></a></button></center></td></tr>
+	</center>
+	</div>
+	</center>
+{% endfor %}
+  
+</table>

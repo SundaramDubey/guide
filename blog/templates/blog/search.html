@@ -1,0 +1,21 @@
+{% include 'nav.html' %}
+ 
+<div>
+	<form method="GET" action="" class="form-inline">{% csrf_token %}
+{{ form.as_p}}
+	 <input type="text" name="q" value = "{{ request.GET.q }}" placeholder="search blog/author / etc...." class="form-control"> 
+	<input type="submit"  value="search" class="btn btn-primary">
+</form>
+<button class="btn btn-warning" style="float: right;"><a href="http://127.0.0.1:8000/blog/create/"
+	><span style="float: right;color: white"> Write your view..</span></a></button>
+ </div>
+{% for i in items %}
+	 
+ 	<div class="list">
+ 	 <h3><li><a href="http://127.0.0.1:8000/blog/{{i.id}}/"><span style="color:orange; font-family: cursive;"> {{i.article_name}}</span></a></li></h3>
+	<p>Author : {{i.author}}</p>
+	</div>
+	 
+	     
+{% endfor %}
+ 

@@ -1,0 +1,13 @@
+ 
+{% include 'nav.html'%}
+ 
+ 
+
+
+<form class="site-form" method="post" action=".">
+	{% csrf_token %}
+	{{ form.as_p }}
+	 
+	<input type="submit" name="" value="LogIn" class="btn btn-primary">	
+	
+</form>

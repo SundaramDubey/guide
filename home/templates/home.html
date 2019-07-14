@@ -1,0 +1,45 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'home/style.css' %}" />
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>home</title>
+</head>
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<body>
+ {% include 'nav.html'%}
+ 
+
+<h4><span style="font-family: fantasy;color: green"> join the biggest community of guides and be a part of tourism <span class="glyphicon glyphicon-user"></span></span></h4>
+<table cellspacing="10px" cellpadding="10px" border="solid" width="100%" style="margin-top:20px, border:2px" class="table" >
+<tr><th class="data">Name</th><th>Experience</th><th>Area</th><th>Contact</th><th>profile</th></tr>
+{% for i in object_list %}
+
+	<center>
+	<div ><center>
+	 
+		 
+		<tr ><td>{{ i.name}}</td><td>{{ i.experience }}</td><td>{{ i.area }}</td><td>{{i.contact}}</td><td><center><button class="btn btn-primary"><a href="http://127.0.0.1:8000/{{i.id}}/detail/"> <span style="color: white">View profile</span></a></button></center></td></tr>
+
+	 
+	</center>
+	</div>
+	</center>
+{% endfor %}
+  
+</table>
+
+
+</body>
+</html>

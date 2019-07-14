@@ -1,0 +1,13 @@
+ 
+{% include 'nav.html'%}
+ 
+ 
+ 
+<form class="site-form" method="post" action=".">
+
+	{% csrf_token %} 
+{{ form.as_p}}
+
+	<input type="submit" name="" value="Sign up" class="btn btn-warning">	
+<span > Already a member?<a href="http://127.0.0.1:8000/accounts/login/"> Login</a></span>
+</form>

@@ -1,0 +1,25 @@
+ 
+<div class="container-fluid songs-container">
+
+    <div class="row">
+
+        <!-- Left Album Info -->
+        <div class="col-sm-12 col-md-10">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                     
+                        {% if album.picture %}
+                            <img src="{{ album.picture.url }}" class="img-responsive">
+                        {% else %}
+                            <h3>No image to display</h3>
+                        {% endif %}
+                    </a>
+                    <h1>  {{album.description}}</h1>
+                    <h4>{{ album.title }} <small>{{ album.area }}</small></h1>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Song Info -->
+        

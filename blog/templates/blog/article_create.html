@@ -1,0 +1,36 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+<form action="." method="post">{% csrf_token %}
+		<!-- {{ form.as_p }} -->
+ {% include 'nav.html'%}
+  <center> 
+   
+<h3><span style="color: green;font-family:cursive; ">Write Your View..</span></h3>
+
+<p><span style="color: maroon;font-family: fantasy;">write what you think..that is all what matters for us, places you visit , your experience in india , thanks</span></p>
+</center>
+<br> 
+
+{% for field in form %}
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<span class="text-danger small">{{ field.errors }}</span>
+		</div>
+		<label class="control-label col-sm-2">{{ field.label_tag }}</label>
+		<div class="col-sm-10">{{ field }}</div>
+	</div>
+<br><br>
+{% endfor %}
+<br>
+		<input type="submit" name="" value="POST" class="btn btn-warning" style="float: left">	
+ 
+ 
+    </form>
+

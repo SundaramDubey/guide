@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ {% include 'nav.html'%}
+  <center> 
+   
+<h3><span style="color: green;font-family:cursive; ">Register As Guide</span></h3>
+
+<p><span style="color: maroon;font-family: fantasy;">register here if your profile pass our review process we will inform you in 7-business days.</span></p>
+</center>
+<br> 
+
+{% for field in form %}
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<span class="text-danger small">{{ field.errors }}</span>
+		</div>
+		<label class="control-label col-sm-2">{{ field.label_tag }}</label>
+		<div class="col-sm-10">{{ field }}</div>
+	</div>
+<br><br>
+{% endfor %}
+
+<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<span class="text-danger small">here is some description</span>
+		</div>
+		<label class="control-label col-sm-2">achievements</label>
+		<div class="col-sm-10"><textarea type="text" rows="5" cols="22" name="" placeholder="write here about yourselves , this is going to be effective in passing our review process ..."></textarea>
+		</div>
+	</div>

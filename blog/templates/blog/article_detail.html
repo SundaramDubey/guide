@@ -1,0 +1,46 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+{% include 'nav.html'%}
+ 
+<center><h2><span style="color: red;font-family: fantasy;">{{article.article_name}}</span></h2>
+<span style="font-family: cursive;"><h3>An Article by: {{article.author}}</h3></span></center>
+ 
+ 
+<br> 
+ <center>
+ 	 
+ 
+ 
+<div class="content">
+	<p><i> This blog is about Area  &nbsp;<span style="color:green">{{article.area}}</span></i></p>
+<p>{{article.content}}</p>
+</div>
+</center>
+<br>
+ 
+ 
+<button class="btn btn-primary"><a href="http://127.0.0.1:8000/blog/{{article.id}}/update"><span style="color: white"> Update</span></a></button>
+
+
+<style type="text/css">
+	.content{
+		width: 70%;
+		border-width: 1px;
+		border-style: solid;
+		height: auto;
+		padding-left: 10px;
+		margin-left: 20px;
+
+	}
+	.btn{
+		
+	float: right;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	}
+</style>>
